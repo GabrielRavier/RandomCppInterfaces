@@ -13,13 +13,6 @@ enum class SeekOrigin
     set = SEEK_SET,
 };
 
-enum class SpecialFileno
-{
-    _stdin = STDIN_FILENO,
-    _stdout = STDOUT_FILENO,
-    _stderr = STDERR_FILENO,
-};
-
 enum class FileMode
 {
     // Random read
