@@ -7,8 +7,9 @@ namespace ravier
 
 struct wideCString
 {
-    std::unique_ptr<wchar_t []> pStr;
-    size_t size;
+    // Do note that if this is nullptr everything will go balls
+    std::unique_ptr<wchar_t []> pStr = std::make_unique<wchar_t []>(1);
+    size_t size = 1;
 
     void makeCopy(const wideCString& src)
     {
