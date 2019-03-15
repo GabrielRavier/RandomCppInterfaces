@@ -6,6 +6,10 @@ namespace ravier
 {
 
 // Random C++20 stuff
+
+namespace cpp20
+{
+
 template<class T> struct type_identity
 {
     using type = T;
@@ -28,6 +32,8 @@ template<class inputIt, class T, class binOp> T accumulate(inputIt first, inputI
     for (; first != last; ++first)
         init = op(std::move(init), *first); // std::move since C++20
     return init;
+}
+
 }
 
 }
