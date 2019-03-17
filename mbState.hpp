@@ -11,13 +11,13 @@ struct mbState
 
     mbState()
     {
-        memset(&state, 0, sizeof(state));    // Initialize mbstate_t properly
+        this->setInitial();    // Initialize mbstate_t properly
     }
 
     void setInitial()
     {
         if (!this->representsInitialShiftState())
-            state = { 0 };
+            memset(&state, '\0', sizeof(state));
     }
 
     bool representsInitialShiftState()
